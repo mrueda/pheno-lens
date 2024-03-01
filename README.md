@@ -1,3 +1,4 @@
+# Pheno-Lens
 <p align="center">
     <em>Visualize and Perform Data Analytics on Phenotypic and Clinical Data Stored in GA4GH Standards and Beyond</em>
 </p>
