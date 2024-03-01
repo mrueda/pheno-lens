@@ -15,3 +15,31 @@
 **Documentation**: <a href="https://mrueda.github.io/pheno-lens" target="_blank">https://mrueda.github.io/pheno-lens</a>
 
 **Docker Hub Image**: <a href="https://hub.docker.com/r/manuelrueda/pheno-lens/tags" target="_blank">https://hub.docker.com/r/manuelrueda/pheno-lens/tags</a>
+
+
+# Download and Installation
+
+## Installing Kibana
+
+```
+docker pull docker.elastic.co/kibana/kibana:7.10.0
+```
+
+Run Kibana
+```bash     
+docker run --link docker.elastic.co/elasticsearch/elasticsearch:7.10.0 -p 5601:5601 {docker.elastic.co/kibana/kibana:7.10.0}
+```
+
+# Access Kibana
+
+Accessible via [http://localhost:5601](http://localhost:5601)
+
+# Explore your data
+
+Create an Index Pattern: To explore your data in Kibana, you first need to create an index pattern that matches the name of the index(es) into which you've ingested data.
+* Go to the "Management" section, find "Index Patterns," and click "Create index pattern."
+* Enter the index name (index_name as used in your bulk insert command) or a pattern that matches your index(es). Follow the prompts to select the time field if your data includes one.
+* Discover: Once your index pattern is created, go to the "Discover" section to explore your data. Here, you can see all documents within your index, search and filter the data, and get a feel for what's available in your dataset.
+
+# Visualize and Dashboard
+After exploring your data in the Discover tab, you can start creating visualizations and dashboards in Kibana. The "Visualize" and "Dashboard" sections of Kibana provide powerful tools to create visual representations of your data.
