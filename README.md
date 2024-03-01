@@ -27,7 +27,7 @@ docker pull docker.elastic.co/kibana/kibana:7.10.0
 
 Run Kibana
 ```bash     
-docker run --link docker.elastic.co/elasticsearch/elasticsearch:7.10.0 -p 5601:5601 {docker.elastic.co/kibana/kibana:7.10.0}
+docker run --link elasticsearch:elasticsearch -p 5601:5601 docker.elastic.co/kibana/kibana:7.10.0
 ```
 
 # Access Kibana
